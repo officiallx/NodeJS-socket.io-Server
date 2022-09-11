@@ -6,7 +6,7 @@ const activeUsers = new Set();
 
 const server = app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
-  console.log(`http://localhost:${PORT}`);
+  // console.log(`http://localhost:${PORT}`);
 });
 
 const io = socket(server);
@@ -40,8 +40,7 @@ io.on("connection", (socket) => {
 
   socket.on("location", function (data) {
     io.emit("location", data);
-    console.log("Long: " + data.longitude);
-    console.log("Lat: " + data.latitude);
+    console.log(data);
   });
 
 });
