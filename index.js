@@ -1,6 +1,6 @@
 const express = require("express");
 const socket = require("socket.io");
-const PORT = 5000;
+const PORT = 5050;
 const app = express();
 const activeUsers = new Set();
 
